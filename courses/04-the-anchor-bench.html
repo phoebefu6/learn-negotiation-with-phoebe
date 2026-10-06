@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 4 of 6. 4,000 real human-human negotiations from the FAIR Deal or No Deal dataset, computed in your browser: does the first proposer end with more, does the first offer predict the final split, and how much value does splitting the difference leave on the table.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="The anchor bench - learn negotiation with phoebe">
+<meta property="og:description" content="Session 4 of 6. 4,000 real negotiations, every number counted live. The anchor holds up, a shuffle breaks it, and meeting halfway wastes a third of the pie.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-negotiation-with-phoebe/courses/04-the-anchor-bench.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-negotiation-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The anchor bench - learn negotiation with phoebe">
+<meta name="twitter:description" content="Session 4 of 6. Real negotiations, counted live: the first offer, the final split, and the cost of meeting halfway.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-negotiation-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 4 · The anchor bench - learn negotiation with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-negotiation-with-phoebe</a> / Session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Negotiation with Phoebe · Session 4 of 6</div>
+    <h1>The anchor <span class="accent">bench</span></h1>
+    <p class="sub">Session 3 read the laboratory evidence that the first number in the room pulls the final number towards it. Tonight the claim meets four thousand real negotiations between strangers, each one a pool of books, hats and balls with private values on both sides and a recorded outcome. The page counts, in your browser, who proposed first and what they walked away with, whether the size of the opening ask predicts the final split, what happens to that link when the asks are shuffled between chats, and how much value the friendliest rule in negotiation, splitting the difference, leaves on the table.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Bench night</span>
+      <span class="chip audience">Bring your session 3 first offer</span>
+      <span class="chip audience">Clicking, plus optional Python</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-14 · What one row holds</span>
+      <span class="a3" style="flex:6">14-40 · The bench, in order</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">Most negotiation advice is built on stories and small laboratory studies. Both are useful and both are easy to over-read. A bench is the opposite discipline: a fixed set of real negotiations and a fixed set of questions, so that when a claim holds or fails you can see exactly what it was measured on. The negotiations here were collected by Facebook AI Research in 2017 to train dialogue models, which is a happy accident for anyone teaching: every person had private values, every outcome was scored, and nobody was performing for a negotiation course.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">measured = counted from the 4,000 rows</span>
+      <span class="pill">replayed = a rule applied to the real pools</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> A measured answer, on real people, to "should I make the first offer?" with the two confounds that shrink it; a break button that proves the anchor link is real and not an artifact of the scoring; and a number to quote the next time someone proposes meeting halfway: on these pools it captures 64.7% of the value that was available.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers what one row holds</span>
+      <h2>A pool, two private price lists, one chat</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">Each negotiation is a small, complete contract. Two strangers on Amazon Mechanical Turk see the same pool of between five and seven items. Each sees only their own values, set so the whole pool is worth exactly 10 points to each of them. They chat, then each enters the split they believe was agreed. If the two entries match, each scores their points; if they walk away or enter different splits, both score zero.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The worked example from Lewis and colleagues 2017. A pool of three books, two hats and one ball. Person A values a book at 1, a hat at 3, the ball at 1. Person B values a book at 2, a hat at 1, the ball at 2. A opens by asking for the books and the hats, worth 9 of A's 10 points. B asks for one book as well and A agrees. A ends with 8 points and B with 4, joint 12. Splitting every item in half would give 10. The best trade, hats to A and the rest to B, gives 14.">
+        <defs>
+          <filter id="s4aSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="13" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s4aHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#0F5C0A" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s4aAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#14230F" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s4aH { font: 800 12px Inter, sans-serif; fill: #14230F; }
+          .s4aL { font: 600 12px Inter, sans-serif; fill: #14230F; }
+          .s4aS { font: 400 11px Inter, sans-serif; fill: #4A5944; }
+          .s4aB { font: 800 11px Inter, sans-serif; fill: #6A4C00; }
+          .s4aV { font: 800 18px Inter, sans-serif; fill: #0A3D07; }
+          .s4aR { font: 800 18px Inter, sans-serif; fill: #991B1B; }
+          .s4aN { font: 400 12px Inter, sans-serif; fill: #4A5944; }
+        </style>
+
+        <text class="s4aH" x="30" y="26">ONE ROW, THE WORKED EXAMPLE IN LEWIS ET AL. 2017</text>
+
+        <g filter="url(#s4aSk)" fill="none" stroke="#14230F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- the pool: three books, two hats, one ball -->
+          <rect x="44" y="62" width="20" height="28" rx="2" transform="rotate(-3 54 76)" fill="#FFFFFF"/>
+          <rect x="70" y="62" width="20" height="28" rx="2" transform="rotate(2 80 76)" fill="#FFFFFF"/>
+          <rect x="96" y="62" width="20" height="28" rx="2" transform="rotate(-1 106 76)" fill="#FFFFFF"/>
+          <path d="M136 90 L150 64 L164 90 Z" fill="#FFFFFF"/>
+          <path d="M172 90 L186 64 L200 90 Z" fill="#FFFFFF"/>
+          <circle cx="230" cy="77" r="13" fill="#FFFFFF"/>
+          <!-- two private value cards -->
+          <rect x="30" y="140" width="125" height="96" rx="8" transform="rotate(-0.8 92 188)" fill="#EDF6EA"/>
+          <rect x="167" y="140" width="125" height="96" rx="8" transform="rotate(0.7 229 188)" fill="#FFFFFF"/>
+          <!-- chat bubbles -->
+          <rect x="320" y="58" width="240" height="46" rx="10" transform="rotate(-0.5 440 81)" fill="#EDF6EA"/>
+          <rect x="320" y="116" width="240" height="46" rx="10" transform="rotate(0.4 440 139)" fill="#FFFFFF"/>
+          <rect x="320" y="174" width="240" height="32" rx="10" transform="rotate(-0.3 440 190)" fill="#EDF6EA"/>
+          <!-- three outcome bars, joint points 0..16 mapped to 0..240 -->
+          <rect x="600" y="62" width="180" height="24" rx="4" fill="url(#s4aHc)"/>
+          <rect x="600" y="132" width="150" height="24" rx="4" fill="#FEF2F2" stroke="#FCA5A5"/>
+          <rect x="600" y="202" width="210" height="24" rx="4" fill="#B7D8AE"/>
+          <path d="M290 81 L312 81" marker-end="url(#s4aAr)"/>
+          <path d="M566 190 C584 190 584 74 594 74" marker-end="url(#s4aAr)"/>
+        </g>
+
+        <text class="s4aS" x="30" y="50">the pool, seen by both</text>
+        <text class="s4aS" x="80" y="110" text-anchor="middle">3 books</text>
+        <text class="s4aS" x="168" y="110" text-anchor="middle">2 hats</text>
+        <text class="s4aS" x="230" y="110" text-anchor="middle">1 ball</text>
+
+        <text class="s4aH" x="44" y="162">A SEES ONLY</text>
+        <text class="s4aL" x="44" y="184">book 1, hat 3</text>
+        <text class="s4aL" x="44" y="202">ball 1</text>
+        <text class="s4aS" x="44" y="222">pool worth 10</text>
+        <text class="s4aH" x="181" y="162">B SEES ONLY</text>
+        <text class="s4aL" x="181" y="184">book 2, hat 1</text>
+        <text class="s4aL" x="181" y="202">ball 2</text>
+        <text class="s4aS" x="181" y="222">pool worth 10</text>
+
+        <text class="s4aB" x="320" y="50">FIRST PROPOSAL, BY A</text>
+        <text class="s4aL" x="334" y="78">A: the books and the hats for me,</text>
+        <text class="s4aL" x="334" y="94">the ball for you</text>
+        <text class="s4aL" x="334" y="136">B: one book for me as well,</text>
+        <text class="s4aL" x="334" y="152">and it is a deal</text>
+        <text class="s4aL" x="334" y="195">A: deal</text>
+        <text class="s4aS" x="320" y="232">paraphrased from the paper's Figure 1</text>
+        <text class="s4aL" x="320" y="256">A asked for 9 of 10, ended with 8</text>
+
+        <text class="s4aS" x="600" y="54">what they agreed: A 8 + B 4</text>
+        <text class="s4aV" x="792" y="81">12</text>
+        <text class="s4aS" x="600" y="124">split every item in half: 5 + 5</text>
+        <text class="s4aR" x="762" y="151">10</text>
+        <text class="s4aS" x="600" y="194">trade: hats to A, the rest to B</text>
+        <text class="s4aV" x="822" y="221">14</text>
+        <text class="s4aS" x="600" y="250">joint points, both people added</text>
+
+        <text class="s4aN" x="30" y="300">Every pool is worth 10 to each person, so every row can be scored against the most that pool could create.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the people did better than meeting halfway and still left 2 points on the table</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why a game about hats is a fair test of negotiation<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The task is what negotiation researchers call <strong>multi-issue bargaining</strong>: several things to divide at once, each valued differently by each side. The designers built three constraints into every pool, stated in section 2.2 of the paper: each person's whole pool is worth 10, every item is worth something to at least one person, and some items are worth something to both. The last two make it competitive: both people cannot get 10. The first makes every outcome comparable across pools.</p>
+        <p>What it shares with a supplier contract is the shape. Several issues, private priorities, a deadline-free chat that can end in no deal, and an outcome that only counts if both sides record the same terms. What it lacks is stakes: workers were paid 15 cents a dialogue with a 5 cent bonus for a maximal score. Keep both facts in view. The bench is strong evidence about how strangers divide value, and weaker evidence about how a buyer behaves when a quarter's margin is on the line.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What was taken from the data, and what was not<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The dataset file holds 12,234 lines: each dialogue appears twice, once from each person's side. Pairing the two sides gives 5,916 dialogues; 39 ended with a disconnect and were dropped, leaving 5,877 completed negotiations. The paper reports 5,808; the released file carries slightly more than the paper counted, and nothing here depends on the difference. The rate of deals in the full 5,877 is 81.1%, against the paper's 80.1%, and the mean score per person is 6.06 against the paper's 6.0. The paper's Table 2 also reports that 76.9% of the agreed deals were Pareto optimal, meaning neither side could have gained without the other losing; on the bench sample the same measure is 77.0%. Three independent figures that match is a good sign the pairing and scoring were done the way the authors did them.</p>
+        <p>The bench ships a seeded sample of 4,000 of those negotiations as plain integers: the pool, both value lists, the outcome, the split, and the first proposal. No dialogue text is shipped. The data carries a Creative Commons Attribution-NonCommercial licence; derived numbers keep the page small and keep worker text out of a public page.</p>
+        <p>"First proposal" needed reading the chat. A rule-based reader looks for the first message, from either person, that states a complete split ("I'll take the hat, you can have the rest"). It was tuned on 200 hand-read examples, which found 11 misreadings that were fixed, then checked on 100 fresh examples, all read correctly. It reads a complete proposal in 93.3% of the sample; the rest open with questions, greetings or half-offers and are left out of the anchor numbers rather than guessed.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The bots that "invented a language".</strong> This is the dataset behind the 2017 headlines that Facebook shut down negotiating bots after they invented their own language. The paper is duller and more useful. When the researchers let two models train against each other, the models drifted away from human English, so they held one partner fixed: the goal was bots that negotiate with people in English. A researcher on the team later called the shutdown coverage clickbait (reported in the press; his post was not read for these pages). The paper does report one unsettling behaviour: its trained models learned to feign interest in an item so they could concede it later. The people in these 4,000 rows were never part of that story. They are ordinary workers splitting hats, which is exactly why their numbers are worth reading.</p>
+    </div>
+  </section>
+
+  <section class="section" id="bench">
+    <div class="section-kicker">
+      <span class="klabel">Build-along · the bench</span>
+      <h2>Four thousand negotiations, counted in front of you</h2>
+      <span class="tag demo">★ 26 min · the main event</span>
+    </div>
+    <p class="lede">The bench has three panels. The rows, so you know what is being counted. The opener and the anchor, with the break button. And the strategy ladder, five ways of dividing the same real pools, ending with the friendliest rule in negotiation. Work down them in order; the steps under the bench tell you what to read and what to write down.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How the anchor number is built for each negotiation: the first chat message that states a complete split is read by a rule-based reader into the items the opener claims, which are priced at the opener's own private values to give the ask, out of 10. The ask is then paired with the points the opener actually ended with. 3,732 of 4,000 chats contain a readable first proposal; 3,013 of those ended in a deal.">
+        <defs>
+          <filter id="s4dSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="29" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s4dHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#0F5C0A" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s4dAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#14230F" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s4dH { font: 800 12px Inter, sans-serif; fill: #14230F; }
+          .s4dL { font: 600 12px Inter, sans-serif; fill: #14230F; }
+          .s4dS { font: 400 11px Inter, sans-serif; fill: #4A5944; }
+          .s4dB { font: 800 11px Inter, sans-serif; fill: #6A4C00; }
+          .s4dV { font: 800 16px Inter, sans-serif; fill: #0A3D07; }
+          .s4dN { font: 400 12px Inter, sans-serif; fill: #4A5944; }
+        </style>
+
+        <text class="s4dH" x="30" y="26">FROM A CHAT TO ONE ANCHOR NUMBER</text>
+
+        <g filter="url(#s4dSk)" fill="none" stroke="#14230F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="30" y="56" width="170" height="78" rx="10" transform="rotate(-0.6 115 95)" fill="url(#s4dHc)"/>
+          <rect x="236" y="62" width="150" height="66" rx="8" transform="rotate(0.5 311 95)" fill="#FFFFFF"/>
+          <rect x="422" y="62" width="150" height="66" rx="8" transform="rotate(-0.4 497 95)" fill="#EDF6EA"/>
+          <rect x="608" y="62" width="110" height="66" rx="8" transform="rotate(0.6 663 95)" fill="#FBF2D9" stroke="#8A6400"/>
+          <rect x="754" y="62" width="100" height="66" rx="8" transform="rotate(-0.5 804 95)" fill="#FFFFFF"/>
+          <path d="M204 95 L230 95" marker-end="url(#s4dAr)"/>
+          <path d="M390 95 L416 95" marker-end="url(#s4dAr)"/>
+          <path d="M576 95 L602 95" marker-end="url(#s4dAr)"/>
+          <path d="M722 95 L748 95" marker-end="url(#s4dAr)"/>
+        </g>
+
+        <rect x="44" y="74" width="142" height="44" rx="6" fill="#FFFFFF"/>
+        <text class="s4dS" x="52" y="92">the first message that</text>
+        <text class="s4dS" x="52" y="108">states a whole split</text>
+        <text class="s4dL" x="250" y="88">rule-based reader</text>
+        <text class="s4dS" x="250" y="106">93.3% of chats read</text>
+        <text class="s4dL" x="436" y="88">items claimed</text>
+        <text class="s4dS" x="436" y="106">priced at own values</text>
+        <text class="s4dB" x="620" y="88">THE ASK</text>
+        <text class="s4dS" x="620" y="106">points of 10</text>
+        <text class="s4dL" x="766" y="88">paired with</text>
+        <text class="s4dS" x="766" y="106">final points</text>
+
+        <text class="s4dV" x="30" y="170">3,732</text>
+        <text class="s4dS" x="90" y="170">of 4,000 chats hold a readable first proposal</text>
+        <text class="s4dV" x="430" y="170">3,013</text>
+        <text class="s4dS" x="490" y="170">of those ended in a deal: the anchor sample</text>
+
+        <text class="s4dN" x="30" y="226">Chats that open with "hi" or a question are skipped until someone names a split. Nothing is guessed.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the ask is in the opener's own points, so a demand for everything is 10 whatever the pool</figcaption>
+    </figure>
+
+    <div id="neg-bench"></div>
+
+    <div class="steps">
+      <div class="step">
+        <p><strong>Read panel 0 first.</strong> Write down the deal rate and the walk-away rate. 81.0% of these negotiations reached a deal, 11.7% ended with someone choosing no agreement, and 7.3% ended with the two people entering different splits, which the task scores as zero for both. That last group is a reminder that a deal both sides remember differently is not a deal.</p>
+        <div class="prompt-box good"><span class="label">★ Step 1 · your notes</span>deal rate:            ____
+walk-away rate:       ____
+mismatched splits:    ____
+points per person:    ____   (out of 10)</div>
+      </div>
+      <div class="step">
+        <p><strong>Panel 1: should you make the first offer?</strong> Read the opener's and responder's mean points on deals, then the three-way split of who came out ahead. On these rows the opener averages 7.65 points against the responder's 7.23 and comes out ahead in 49.7% of deals, behind in 34.8%. Real, and far from a sure thing.</p>
+        <div class="prompt-box good"><span class="label">★ Step 2 · first mover</span>opener, deals only:      ____
+responder, deals only:   ____
+opener ahead / tie / behind:  ____ / ____ / ____</div>
+      </div>
+      <div class="step">
+        <p><strong>Now the anchor.</strong> The correlation between what the opener asked for and what the opener ended with is r = 0.55. Then read the two confound tiles: in 40.5% of deals the first proposal was simply accepted, so ask and final are the same split; among the deals where the opener moved, r falls to 0.35. Holding fixed what a balanced split of that pool would give the opener, r is 0.41.</p>
+        <div class="prompt-box good"><span class="label">★ Step 3 · the anchor, three ways</span>r, all deals:                     ____
+r, only deals where opener moved:  ____
+r, holding the pool fixed:         ____</div>
+      </div>
+      <div class="step">
+        <p><strong>Press the break button.</strong> It shuffles the first-offer values across chats, so every opener is paired with somebody else's ask. If the 0.55 came from the way points are scored rather than from the opener's own number, it would survive the shuffle. It drops to r = 0.05. Press again to put the asks back.</p>
+        <div class="prompt-box good"><span class="label">★ Step 4 · break it</span>r before the shuffle:  ____
+r after the shuffle:   ____
+what the shuffle proves: ______________________</div>
+      </div>
+      <div class="step">
+        <p><strong>Read the walk-away table under panel 1.</strong> It answers the fear that a high anchor drives people away. On these rows it did not: openers who asked for 8 to 10 points reached a deal 81.5% of the time, openers who asked for 5 or fewer only 69.4%. Session 3 explains why that is not permission to ask for everything.</p>
+        <div class="prompt-box good"><span class="label">★ Step 5 · the price of a high anchor</span>asked 0-5:   deal rate ____   opener if deal ____
+asked 8-10:  deal rate ____   opener if deal ____</div>
+      </div>
+      <div class="step">
+        <p><strong>Panel 2: walk the ladder from the top.</strong> The first rung is the anti-lever, always split the difference. Read its share of the maximum, then click down through the people and the two trade rules. For each rung write the share of the maximum and the gap between the sides.</p>
+        <div class="prompt-box good"><span class="label">★ Step 6 · the ladder</span>rung                          share of max   gap
+split the difference          ____           ____
+people, walk-aways as 0       ____           ____
+people, deals only            ____           ____
+trade across issues           ____           ____
+trade, then balance           ____           ____</div>
+      </div>
+      <div class="step">
+        <p><strong>Optional, for the builders: recompute the anchor yourself.</strong> A short Python script reads the same rows the bench reads. The shuffle uses Python's own generator, so your shuffled r will differ from the bench's 0.05; it should still be close to zero.</p>
+        <div class="prompt-box good"><span class="label">★ Step 7 · the anchor in Python</span>import json, random, statistics, urllib.request
+url = "https://phoebefu6.github.io/learn-negotiation-with-phoebe/assets/negotiation-sample.js"
+src = urllib.request.urlopen(url).read().decode()
+S = json.loads(src.split("window.NEG_SAMPLE = ")[1].rstrip().rstrip(";"))
+rows = [S["rows"][i * 21:(i + 1) * 21] for i in range(S["n"])]
+
+ask, got = [], []
+for g in rows:
+    va, vb, outcome, prop, offer = g[3:6], g[6:9], g[9], g[13], g[14:17]
+    if outcome != 0 or prop == 0:
+        continue                      # deals with a readable first proposal only
+    mine = va if prop == 1 else vb    # the opener's private values
+    ask.append(sum(o * v for o, v in zip(offer, mine)))
+    got.append(g[19] if prop == 1 else g[20])
+print(len(ask), "deals, anchor r =", round(statistics.correlation(ask, got), 2))
+
+shuffled = ask[:]
+random.Random(1).shuffle(shuffled)
+print("shuffled r =", round(statistics.correlation(shuffled, got), 2))
+# 3013 deals, anchor r = 0.55
+# shuffled r = 0.01</div>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>Read the tag before the number.</strong> Panels 0 and 1 are <em>measured</em>: counted from what the people did. The three trade-style rungs in panel 2 are <em>replayed</em>: a rule applied to the real pools with both sides' values known, which no real negotiator gets for free. They show what was available, not what anyone could have reached.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the first-offer effect on real rows</span>
+      <h2>The anchor holds, smaller than the story</h2>
+      <span class="tag concept">5 min live</span>
+    </div>
+    <p class="lede">The laboratory finding from session 3 says the first offer predicts the final settlement. On real strangers dividing real value, it does: r = 0.55 across 3,013 deals. But two things inflate that number, and a careful negotiator wants the size that survives them, not the headline.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four bars of Pearson r between the opener's ask and the opener's final points. All 3,013 deals: 0.55. Holding fixed what a balanced split would give the opener: 0.41. Only the 1,793 deals where the opener moved from the first proposal: 0.35. First offers shuffled across chats: 0.05.">
+        <defs>
+          <filter id="s4bSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="31" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s4bHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#0F5C0A" stroke-width="1" opacity=".5"/></pattern>
+        </defs>
+        <style>
+          .s4bH { font: 800 12px Inter, sans-serif; fill: #14230F; }
+          .s4bL { font: 600 12px Inter, sans-serif; fill: #14230F; }
+          .s4bS { font: 400 11px Inter, sans-serif; fill: #4A5944; }
+          .s4bW { font: 800 12px Inter, sans-serif; fill: #FFFFFF; }
+          .s4bV { font: 800 12px Inter, sans-serif; fill: #0A3D07; }
+          .s4bR { font: 800 12px Inter, sans-serif; fill: #991B1B; }
+          .s4bN { font: 400 12px Inter, sans-serif; fill: #4A5944; }
+        </style>
+
+        <text class="s4bH" x="30" y="30">HOW MUCH OF THE ANCHOR SURVIVES</text>
+        <text class="s4bS" x="290" y="30">Pearson r, opener's ask against opener's final points</text>
+
+        <g filter="url(#s4bSk)" fill="none" stroke="#14230F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="260" y="55" width="440" height="30" rx="4" fill="#0F5C0A" stroke="#0F5C0A"/>
+          <rect x="260" y="107" width="331" height="30" rx="4" fill="#2C7A22" stroke="#2C7A22"/>
+          <rect x="260" y="159" width="282" height="30" rx="4" fill="url(#s4bHc)"/>
+          <rect x="260" y="211" width="40" height="30" rx="4" fill="#FEF2F2" stroke="#FCA5A5"/>
+          <path d="M260 46 L260 252" stroke="#4A5944"/>
+        </g>
+
+        <text class="s4bL" x="240" y="75" text-anchor="end">all 3,013 deals</text>
+        <text class="s4bW" x="272" y="75">0.55</text>
+        <text class="s4bL" x="240" y="127" text-anchor="end">holding the pool fixed</text>
+        <text class="s4bW" x="272" y="127">0.41</text>
+        <text class="s4bL" x="240" y="179" text-anchor="end">only deals where opener moved</text>
+        <text class="s4bV" x="552" y="179">0.35</text>
+        <text class="s4bS" x="604" y="179">1,793 deals</text>
+        <text class="s4bL" x="240" y="231" text-anchor="end">asks shuffled across chats</text>
+        <text class="s4bR" x="310" y="231">0.05</text>
+        <text class="s4bS" x="352" y="231">the break button</text>
+
+        <text class="s4bN" x="30" y="280">Each control removes one way the headline could be flattered. What is left is still clearly above the shuffle.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the anchor is real on real people; the size you quote depends on which question you are asking</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Confound one: the accepted first offer<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>In 40.5% of these deals the responder simply accepted the first proposal. In those chats the ask and the final split are the same thing, so they correlate perfectly by construction, and they pull the overall r up. Drop them and ask the sharper question: when the opener did have to move, did a bigger opening still mean a bigger finish? Yes, with r = 0.35 over the remaining 1,793 deals.</p>
+        <p>That is the version of the anchoring claim that matters at a real table, because the deals you lose sleep over are the ones where the other side pushes back.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Confound two: some pools are simply kinder<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>If your points sit in the one item the other person does not care about, you can ask for a lot and get a lot, and neither number says anything about anchoring: both come from the pool. The bench measures this by computing, for every pool, what the opener would get under a balanced split (the trade-then-balance rung) and holding that fixed. The partial correlation between ask and final is 0.41. Generous pools explain part of the headline, not most of it.</p>
+        <p>This is the general move whenever someone shows you a correlation from a negotiation dataset: ask what both numbers share. Here it is the pool. In a sales team it might be the territory, the product, or the season.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Who opened, and whether the opener was simply the first to type<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>In 86.7% of the readable chats the first proposal came from the person who typed the first message, and in 82.0% it was in that very first message. The first-mover numbers are therefore close to "the person who spoke first", with one difference worth keeping: a greeting is not an offer. Whoever names the first split anchors the chat, whoever said hello.</p>
+        <p>The first-mover advantage here, 7.65 against 7.23 points on deals, is an average over strangers who mostly asked for a lot. Session 3 teaches the conditions under which going first backfires, and those conditions, mostly about what you know and what you reveal, are not visible in this data.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>A constructed case: Kestrel Foods and the carton contract.</strong> Kestrel's buyer reads the bench and decides to open. She does not open at "everything": she opens at a number she can justify with the rival quote from session 2. When Brightwell's account manager counters, the anchor has done its work in the 0.35 sense, not the 0.55 sense. The buyer plans for the counter rather than hoping her first number survives intact.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-3">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers splitting the difference against the frontier</span>
+      <h2>Meeting halfway is fair, and wasteful</h2>
+      <span class="tag concept">4 min live</span>
+    </div>
+    <p class="lede">Splitting the difference has every social virtue. It is quick, it is visibly even, nobody loses face. On these real pools it is also the most wasteful rule on the ladder. Because every person's pool is worth exactly 10 to them, halving every item gives each side exactly 5, a joint 10, while the most each pool could create averages 15.46.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five bars showing the share of the most each real pool could create, summed over 4,000 pools. Split the difference: 64.7 percent. The people, counting walk-aways as zero: 78.4 percent. The people, deals only: 95.0 percent. Trade then balance: 99.7 percent. Trade across issues: 100 percent.">
+        <defs>
+          <filter id="s4cSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="43" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s4cHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#0F5C0A" stroke-width="1" opacity=".5"/></pattern>
+        </defs>
+        <style>
+          .s4cH { font: 800 12px Inter, sans-serif; fill: #14230F; }
+          .s4cL { font: 600 12px Inter, sans-serif; fill: #14230F; }
+          .s4cS { font: 400 11px Inter, sans-serif; fill: #4A5944; }
+          .s4cW { font: 800 12px Inter, sans-serif; fill: #FFFFFF; }
+          .s4cR { font: 800 12px Inter, sans-serif; fill: #991B1B; }
+          .s4cV { font: 800 12px Inter, sans-serif; fill: #0A3D07; }
+          .s4cB { font: 800 11px Inter, sans-serif; fill: #6A4C00; }
+          .s4cN { font: 400 12px Inter, sans-serif; fill: #4A5944; }
+        </style>
+
+        <text class="s4cH" x="30" y="30">SHARE OF THE VALUE THE POOLS COULD CREATE</text>
+        <text class="s4cS" x="380" y="30">4,000 real pools, real private values</text>
+
+        <g filter="url(#s4cSk)" fill="none" stroke="#14230F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="260" y="55" width="310" height="30" rx="4" fill="#FEF2F2" stroke="#FCA5A5"/>
+          <rect x="260" y="107" width="376" height="30" rx="4" fill="url(#s4cHc)"/>
+          <rect x="260" y="159" width="456" height="30" rx="4" fill="#2C7A22" stroke="#2C7A22"/>
+          <rect x="260" y="211" width="478" height="30" rx="4" fill="#0F5C0A" stroke="#0F5C0A"/>
+          <rect x="260" y="263" width="480" height="30" rx="4" fill="#0F5C0A" stroke="#0F5C0A"/>
+          <path d="M740 46 L740 300" stroke="#8A6400" stroke-dasharray="5 5"/>
+        </g>
+
+        <text class="s4cL" x="240" y="75" text-anchor="end">split the difference</text>
+        <text class="s4cR" x="272" y="75">64.7%</text>
+        <text class="s4cS" x="586" y="75">5.46 points left per deal</text>
+        <text class="s4cL" x="240" y="127" text-anchor="end">the people, walk-aways as 0</text>
+        <text class="s4cV" x="648" y="127">78.4%</text>
+        <text class="s4cL" x="240" y="179" text-anchor="end">the people, deals only</text>
+        <text class="s4cW" x="272" y="179">95.0%</text>
+        <text class="s4cL" x="240" y="231" text-anchor="end">trade, then balance</text>
+        <text class="s4cW" x="272" y="231">99.7%</text>
+        <text class="s4cL" x="240" y="283" text-anchor="end">trade across issues</text>
+        <text class="s4cW" x="272" y="283">100.0%</text>
+        <text class="s4cB" x="752" y="179">the frontier</text>
+
+        <text class="s4cN" x="30" y="326">Replayed rungs know both sides' values and ignore whether the other side would say yes. The people did not.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the even split is the only rule here that does worse than strangers chatting about hats</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The number to quote: 85.9%<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Click the split rung and read its verdict line. In 85.9% of these real pools there was a whole-item deal that gave <em>both</em> people more than the 5 points an even split gives each. That is the anti-lever's honest cost. It is not that meeting halfway is unfair; it is that in most pools both sides could have done better at once, and the halfway rule never looks.</p>
+        <p>The honest nuance, because an anti-lever that overstates its case is a lie in the other direction: the split never produces a walk-away, and the people's walk-aways cost them. Counting no-deals as zero, the people capture 78.4% of the available value, well above the split's 64.7%, but their deals-only figure is 95.0%. The split beats nothing; it loses to almost everything that involves talking about what each side cares about.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why "trade across issues" still is not the answer on its own<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Giving each item to whoever values it more creates all the value there is, 100.0% by construction, but it can be lopsided: the mean gap between the two sides is 2.65 points. The trade-then-balance rung picks, among whole-item splits, the one that maximises the product of both sides' points. It captures 99.7% of the value instead of 100.0% and closes the gap to 2.21. That is the shape of session 5: create the value first, then divide it in a way both sides can sign.</p>
+        <p>Both trade rungs assume each side's values are known. At a real table they are not, and finding them out by asking about interests, which is session 1, is most of the work. The rungs show the size of the prize for doing that work.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>A constructed case: the halfway price that cost both sides.</strong> Kestrel and Brightwell are 30 dollars apart on the carton price and agree to meet in the middle. Nobody asks about payment terms, which Brightwell cares about a great deal and Kestrel barely at all. Session 5 replays the same deal with the payment terms on the table and both sides finish ahead of the halfway price.</p>
+    </div>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session 5</h2>
+      <span class="tag exercise">30 min</span>
+    </div>
+    <ol>
+      <li><strong>Write the anchor sentence you would actually use.</strong> One line, with the number you trust: "On 3,013 real deals between strangers, the opening ask and the opener's final points correlate at 0.55, and at 0.35 when the opener had to move."</li>
+      <li><strong>Find a split-the-difference in your own work.</strong> A budget, a deadline, a price. Name the second issue nobody put on the table, and guess which side cared about it more.</li>
+      <li><strong>Run the Python in step 7</strong> if you code. Change the filter to keep walk-aways as zero and see what happens to r.</li>
+      <li><strong>Bring a two-issue deal to session 5.</strong> Price and one other term is enough. Session 5 turns it into a trade.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 4 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · The anchor correlation on the bench is 0.55. Pressing the break button drops it to 0.05. What does the drop prove?</p>
+      <button class="qopt" type="button">A · That anchoring only works in laboratory studies</button>
+      <button class="qopt" type="button">B · That the dataset is too small to say anything</button>
+      <button class="qopt" type="button">C · That the 0.55 belongs to each opener's own ask in their own chat; if it came from how points are scored, pairing openers with somebody else's ask would not have destroyed it</button>
+      <button class="qopt" type="button">D · That first offers do not matter once the other side counters</button>
+      <p class="qwhy">A shuffle is a placebo: it keeps every number in the data and breaks only the pairing. A correlation that survives a shuffle is an artifact. This one collapses, so it is about the ask. The confounds in Part 2 then decide how large it is.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · Why is r = 0.35 a better number than 0.55 for a negotiator deciding how hard to anchor?</p>
+      <button class="qopt" type="button">A · Because smaller numbers are always more conservative</button>
+      <button class="qopt" type="button">B · Because in 40.5% of deals the first proposal was simply accepted, which makes ask and final identical by construction; among deals where the opener had to move, the link is 0.35, and those are the deals that need a plan</button>
+      <button class="qopt" type="button">C · Because 0.35 is the laboratory figure from session 3</button>
+      <button class="qopt" type="button">D · Because the shuffle reduces every correlation by 0.2</button>
+      <p class="qwhy">Both numbers are measured and both are true. They answer different questions. The 0.35 answers the one you face when the other side pushes back.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Splitting every item down the middle gives each person exactly 5 points in every pool. What does it cost?</p>
+      <button class="qopt" type="button">A · 5.46 joint points per deal against the most the pool could create, 64.7% of the available value; and in 85.9% of pools a whole-item deal gave both people more than 5</button>
+      <button class="qopt" type="button">B · Nothing, because both sides get the same</button>
+      <button class="qopt" type="button">C · It causes more walk-aways than any other rule</button>
+      <button class="qopt" type="button">D · It only costs value when one side lies about its values</button>
+      <p class="qwhy">Even is not the same as efficient. The split never reaches for the trades that make both sides better off, and on these pools such trades existed most of the time. Its one real virtue is that it never ends in a walk-away, which is why the people, with their walk-aways counted as zero, beat it by less than you might expect.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Lewis, Yarats, Dauphin, Parikh and Batra (2017), "Deal or No Deal? End-to-End Learning for Negotiation Dialogues"</span><span class="note">Read at source (arXiv 1706.05125): task design, the three value constraints, pay, 5,808 dialogues, 80.1% agreed, mean score 6.0, the Figure 1 example</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The released dataset, facebookresearch/end-to-end-negotiator</span><span class="note">CC BY-NC 4.0, licence read at source; every bench number computed from it in this build and reproduced by an independent Python run before any page quoted it</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">First-mover and anchoring measures on the real rows</span><span class="note">Measured here; the first-proposal reader's tuning and its 100-example check are described in Part 1</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The strategy ladder's trade rungs</span><span class="note">Replayed, not observed: a rule applied to real pools with both sides' values known; acceptance is not modelled and the widget says so</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The rows</b><span>4,000 real negotiations, 81.0% deals, every pool worth 10 to each side.</span></div>
+      <div class="cheat-item"><b>Going first</b><span>Opener 7.65 vs responder 7.23 on deals; ahead 49.7%, behind 34.8%.</span></div>
+      <div class="cheat-item"><b>The anchor</b><span>r = 0.55 on all deals, 0.35 where the opener moved, 0.41 holding the pool fixed.</span></div>
+      <div class="cheat-item"><b>The break button</b><span>Shuffle the asks across chats: r falls to 0.05. The link is real.</span></div>
+      <div class="cheat-item"><b>Meet halfway</b><span>64.7% of the available value; in 85.9% of pools both sides could beat it.</span></div>
+      <div class="cheat-item"><b>Create, then divide</b><span>Trade then balance: 99.7% of the value with a smaller gap than pure trade.</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Next session</span>
+    <p>The ladder showed the prize: trades across issues created nearly all the value the pools held, while meeting halfway left a third of it behind. Session 5 is how you find those trades without being told the other side's values: priority questions, packages instead of single issues, and a points table for the Kestrel and Brightwell contract that turns a 30-dollar standoff into a deal both sides prefer.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 4 of 6 · learn-negotiation-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="03-the-first-number-in-the-room.html">← Prev: The first number in the room</a> &nbsp;·&nbsp; <a href="05-trade-across-issues.html">Next: Trade across issues →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/negotiation-sample.js?v=1"></script>
+<script src="../assets/negotiation-live.js?v=2"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

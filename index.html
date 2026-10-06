@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Six sessions on negotiation: positions and interests, walk-away points and the deal zone, first offers and anchors, a bench of 4,000 real human negotiations computed in your browser, trading across issues, and closing without burning the relationship. Free, by Phoebe Fu.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Learn Negotiation with Phoebe">
+<meta property="og:description" content="4,000 real negotiations, counted live. The first offer anchors the deal, a shuffle proves it, and meeting halfway captures 64.7% of the value on the table.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-negotiation-with-phoebe/">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-negotiation-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learn Negotiation with Phoebe">
+<meta name="twitter:description" content="Interests, walk-away points, anchors and trades, tested on 4,000 real negotiations in your browser.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-negotiation-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Learn Negotiation with Phoebe</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: 1; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(var(--shadow-rgb),.16); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--muted); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,var(--indigo-50)); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .not-this { border: 1px solid var(--hairline); border-left: 4px solid var(--clay); border-radius: var(--radius); background: #fff; padding: 1.1rem 1.3rem; margin-top: 1.2rem; }
+  .not-this h3 { font-size: .95rem; font-weight: 800; margin-bottom: .5rem; }
+</style>
+</head>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn with Phoebe · Communication</div>
+    <h1>Learn <span class="accent">Negotiation</span> with Phoebe</h1>
+    <p class="sub">Every negotiation has two layers: what each side says it wants, and why. Most deals that fail, or settle for less than they could, never get below the first layer. Six sessions on the craft underneath: interests, the walk-away point that tells you when to leave, the first number in the room and how much it really moves the result, and the trades that let both sides finish ahead. The claims are tested, not repeated. A bench of 4,000 real negotiations between strangers, counted in your browser, shows the first-offer effect holding up, a shuffle proving it is real, and the friendliest rule in negotiation, meeting halfway, capturing 64.7% of the value that was on the table.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="6">6</b><span>sessions</span></div>
+      <div class="stat"><b data-count="4000">4,000</b><span>real negotiations</span></div>
+      <div class="stat"><b data-count="5">5</b><span>strategies on the bench</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The six sessions 🎯 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· from what they say to a deal both sides sign</span></h2>
+      <p class="plede">The running case is a constructed one: <strong>Kestrel Foods</strong>, an invented grocery chain, negotiating a twelve-month carton supply contract with <strong>Brightwell Packaging</strong>, an invented supplier. Every price and cost in it is made up for teaching. The evidence around it is real: books and papers are traced to their source, and the bench runs on a public dataset of human negotiations.</p>
+    </div>
+
+    <div class="course-grid">
+      <a class="course-card" href="courses/01-positions-and-interests.html" style="--diff:#34D399">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Session 1 · foundation</span>
+        <h3>Positions and interests</h3>
+        <p>What each side says it wants, and why it wants it. The library window, the four principles of principled negotiation, and what the &quot;Harvard method&quot; label leaves out. Build-along: map both sides of a supplier contract.</p>
+        <span class="meta"><span class="pill amber">▶ Start here</span></span>
+      </a>
+      <a class="course-card" href="courses/02-walk-away-and-the-deal-zone.html" style="--diff:#FBBF24">
+        <span class="cicon">🚪</span>
+        <span class="cnum">Session 2 · core</span>
+        <h3>Walk-away points and the deal zone</h3>
+        <p>Your best alternative, the price it implies, and the zone where a deal can exist. A calculator for the carton contract shows the zone, its width, and an opening number already outside it.</p>
+        <span class="meta"><span class="pill">the deal-zone calculator</span></span>
+      </a>
+      <a class="course-card" href="courses/03-the-first-number-in-the-room.html" style="--diff:#FBBF24">
+        <span class="cicon">🎯</span>
+        <span class="cnum">Session 3 · core</span>
+        <h3>The first number in the room</h3>
+        <p>Anchoring as the laboratory measured it, read at source, and the honest disagreement about whether to go first. How to open, and how to stop an opening number from setting your deal.</p>
+        <span class="meta"><span class="pill">anchors, read at source</span></span>
+      </a>
+      <a class="course-card" href="courses/04-the-anchor-bench.html" style="--diff:#F87171">
+        <span class="cicon">🎛️</span>
+        <span class="cnum">Session 4 · bench night</span>
+        <h3>The anchor bench</h3>
+        <p>4,000 real negotiations between strangers, counted in your browser. The first offer predicts the final split, a shuffle proves it is real, and splitting the difference captures 64.7% of the value on the table.</p>
+        <span class="meta"><span class="pill amber">★ the bench</span></span>
+      </a>
+      <a class="course-card" href="courses/05-trade-across-issues.html" style="--diff:#FB923C">
+        <span class="cicon">🔁</span>
+        <span class="cnum">Session 5 · advanced</span>
+        <h3>Trade across issues</h3>
+        <p>The fixed-pie assumption, why it is so common, and the trade that breaks it. Price against payment terms, volume and delivery, and a package both sides prefer to meeting halfway.</p>
+        <span class="meta"><span class="pill">logrolling</span></span>
+      </a>
+      <a class="course-card" href="courses/06-saying-no-closing-and-the-next-deal.html" style="--diff:#FBBF24">
+        <span class="cicon">🤝</span>
+        <span class="cnum">Session 6 · core</span>
+        <h3>Saying no, closing, and the next deal</h3>
+        <p>A no that keeps the relationship, a close both sides remember the same way, and what the famous hostage-negotiator advice does and does not have evidence for. Final scorecard.</p>
+        <span class="meta"><span class="pill amber">🔒 final scorecard</span></span>
+      </a>
+    </div>
+
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>foundation</span>
+      <span><i style="background:#FBBF24"></i>core</span>
+      <span><i style="background:#FB923C"></i>advanced</span>
+      <span><i style="background:#F87171"></i>bench night</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>Your passport 🎫</h2>
+      <p class="plede">Clear all three quiz questions in a session and it gets stamped. Six stamps means you can map the interests under positions, work out your walk-away price before the meeting, open with a number you can defend, and trade your way to a deal that beats meeting halfway. Stamps live in this browser only.</p>
+    </div>
+    <div class="pp-strip"></div>
+  </section>
+
+  <section class="section">
+    <div class="not-this">
+      <h3>What this is not, so you land in the right place 🧭</h3>
+      <table class="clean">
+        <tr><th>If your question is</th><th>Go here instead</th></tr>
+        <tr><td>How does face shape a negotiation in Chinese business, and how do I read a softened no?</td><td><a href="https://phoebefu6.github.io/learn-business-chinese-advanced-with-phoebe/courses/05-negotiation-and-face.html">Business Chinese Advanced, session 5 ↗</a></td></tr>
+        <tr><td>How do I deliver bad news or disagree without damaging the working relationship?</td><td><a href="https://phoebefu6.github.io/learn-communication-with-phoebe/courses/06-bad-news-and-disagreement.html">Communication, session 6 ↗</a></td></tr>
+        <tr><td>How should I set the price in the first place, from demand data?</td><td><a href="https://phoebefu6.github.io/learn-economics-with-phoebe/courses/p3-pricing-with-the-number.html">Economics, pricing with the number ↗</a></td></tr>
+        <tr><td><strong>I have a deal to make with someone whose interests differ from mine, and I want to finish with more without losing them.</strong></td><td><strong>you are in the right place</strong></td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Three doors into the same conviction: find out why they want it, know when to walk, and trade instead of splitting.</p>
+      <div class="path"><b>📅 I have a negotiation next week</b>
+        <a class="pstep" href="courses/02-walk-away-and-the-deal-zone.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-the-first-number-in-the-room.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-saying-no-closing-and-the-next-deal.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">your walk-away price, your opening number, and a close in writing</span>
+      </div>
+      <div class="path"><b>🤝 We keep meeting halfway</b>
+        <a class="pstep" href="courses/01-positions-and-interests.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-the-anchor-bench.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-trade-across-issues.html">5</a>
+        <span style="font-size:.82rem;color:var(--muted)">interests, the measured cost of splitting, and the trade that beats it</span>
+      </div>
+      <div class="path"><b>🎯 The whole craft</b>
+        <a class="pstep" href="courses/01-positions-and-interests.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-walk-away-and-the-deal-zone.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-the-first-number-in-the-room.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-the-anchor-bench.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-trade-across-issues.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-saying-no-closing-and-the-next-deal.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">from the first conversation to the signed deal and the next one</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>What is honest here 🧾</h2>
+      <p class="plede">Negotiation advice travels further than its evidence. Each claim on these pages carries its status, and where the research disagrees with itself, the pages teach the disagreement.</p>
+    </div>
+    <table class="clean">
+      <tr><th>Claim</th><th>Status</th></tr>
+      <tr><td>Every number on the bench: deal rates, the first-mover gap, the anchor correlation and its controls, what each strategy captures</td><td><strong>Really computed</strong> in your browser from a seeded sample of 4,000 dialogues in the FAIR "Deal or No Deal?" dataset (Lewis et al. 2017, CC BY-NC 4.0), and reproduced by an independent Python run</td></tr>
+      <tr><td>The trade-style strategies on the bench</td><td><strong>Replayed.</strong> A rule applied to the real pools with both sides' values known; whether the other side would accept is not modelled, and the widget says so</td></tr>
+      <tr><td>The four principles, BATNA, interests over positions</td><td><strong>From Getting to Yes,</strong> as summarised by its publisher and by secondary sources; the book's own text could not be opened for these pages, and each session says so</td></tr>
+      <tr><td>The first-offer effect, and the studies where going first backfires</td><td><strong>From the published studies,</strong> abstracts read at source; no correlation from a paper that could not be opened is printed</td></tr>
+      <tr><td>Hostage-negotiator techniques</td><td><strong>Separated into anecdote and evidence.</strong> What a technique claims, and whether any study tested it, are stated apart</td></tr>
+      <tr><td>Kestrel Foods, Brightwell Packaging and every price in their contract</td><td><strong>Constructed</strong> for teaching; no real company or deal</td></tr>
+    </table>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">The whole craft at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-negotiation-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span>Neighbours on the shelf: <a href="https://phoebefu6.github.io/learn-communication-with-phoebe/">Communication ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-business-chinese-advanced-with-phoebe/">Business Chinese Advanced ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-economics-with-phoebe/">Economics ↗</a></span>
+  </footer>
+
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+ "title": "Negotiation",
+ "centerColor": "#0A3D07",
+ "sessions": [
+  {
+   "label": "Positions and\ninterests",
+   "href": "courses/01-positions-and-interests.html",
+   "color": "#34D399",
+   "concepts": [
+    {
+     "label": "Why, not what",
+     "href": "courses/01-positions-and-interests.html"
+    },
+    {
+     "label": "Four principles",
+     "href": "courses/01-positions-and-interests.html"
+    },
+    {
+     "label": "The Harvard-method label",
+     "href": "courses/01-positions-and-interests.html"
+    }
+   ]
+  },
+  {
+   "label": "Walk-away points\nand the deal zone",
+   "href": "courses/02-walk-away-and-the-deal-zone.html",
+   "color": "#FBBF24",
+   "concepts": [
+    {
+     "label": "Your best alternative",
+     "href": "courses/02-walk-away-and-the-deal-zone.html"
+    },
+    {
+     "label": "The walk-away price",
+     "href": "courses/02-walk-away-and-the-deal-zone.html"
+    },
+    {
+     "label": "The deal zone",
+     "href": "courses/02-walk-away-and-the-deal-zone.html"
+    }
+   ]
+  },
+  {
+   "label": "The first number\nin the room",
+   "href": "courses/03-the-first-number-in-the-room.html",
+   "color": "#FBBF24",
+   "concepts": [
+    {
+     "label": "Anchors at source",
+     "href": "courses/03-the-first-number-in-the-room.html"
+    },
+    {
+     "label": "Go first, or not",
+     "href": "courses/03-the-first-number-in-the-room.html"
+    },
+    {
+     "label": "Defusing their anchor",
+     "href": "courses/03-the-first-number-in-the-room.html"
+    }
+   ]
+  },
+  {
+   "label": "The anchor\nbench",
+   "href": "courses/04-the-anchor-bench.html",
+   "color": "#F87171",
+   "concepts": [
+    {
+     "label": "4,000 real deals",
+     "href": "courses/04-the-anchor-bench.html"
+    },
+    {
+     "label": "The shuffle test",
+     "href": "courses/04-the-anchor-bench.html"
+    },
+    {
+     "label": "Halfway is wasteful",
+     "href": "courses/04-the-anchor-bench.html"
+    }
+   ]
+  },
+  {
+   "label": "Trade across\nissues",
+   "href": "courses/05-trade-across-issues.html",
+   "color": "#FB923C",
+   "concepts": [
+    {
+     "label": "The fixed-pie bias",
+     "href": "courses/05-trade-across-issues.html"
+    },
+    {
+     "label": "Trade by priority",
+     "href": "courses/05-trade-across-issues.html"
+    },
+    {
+     "label": "Packages, not issues",
+     "href": "courses/05-trade-across-issues.html"
+    }
+   ]
+  },
+  {
+   "label": "Saying no, closing,\nthe next deal",
+   "href": "courses/06-saying-no-closing-and-the-next-deal.html",
+   "color": "#FBBF24",
+   "concepts": [
+    {
+     "label": "A no that keeps the deal",
+     "href": "courses/06-saying-no-closing-and-the-next-deal.html"
+    },
+    {
+     "label": "Close in writing",
+     "href": "courses/06-saying-no-closing-and-the-next-deal.html"
+    },
+    {
+     "label": "Hostage-room claims",
+     "href": "courses/06-saying-no-closing-and-the-next-deal.html"
+    }
+   ]
+  }
+ ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
